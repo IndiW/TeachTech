@@ -40,6 +40,7 @@
                     <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th scope="col">Q#</th>
                             <th scope="col">Question</th>
                             <th scope="col">Timestamp</th>
                             <th scope="col">Popularity</th>
@@ -68,11 +69,20 @@
                       </table>
                 </div>
             </div>
+            <container>
             <div class="row">
-              {% autoescape off %}
-              {{ plot_div }}
-              {% endautoescape %}            
+              <div class="col-lg-8">
+                {% autoescape off %}
+                {{ plot_div }}
+                {% endautoescape %}  
+              </div>
+              <div class="col">
+                {% autoescape off %}
+                {{ plot_div2 }}
+                {% endautoescape %}  
+              </div>          
             </div>
+          </container>
         </div>
 
     </div>
