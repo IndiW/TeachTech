@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from secrets import *
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#in secrets.py
+SECRET_KEY = '_(&a3kcjces=2v)%)*^w&6)#l=6s_(qfaqu-(0z(qnwhj9)o%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'poll',
+    'questions',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'TeachTech.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,"template")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,4 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
+
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
 STATIC_URL = '/static/'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

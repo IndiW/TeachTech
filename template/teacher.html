@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body id="body_pad">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h1>Lectures</h1>
+
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="">Lecture 1</a>
+                          <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="">Lecture 2</a>
+                          <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="">Lecture 3</a>
+                          <span class="badge badge-primary badge-pill">20</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="">Lecture 4</a>
+                            <span class="badge badge-primary badge-pill">5</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="">Lecture 5</a>
+                            <span class="badge badge-primary badge-pill">8</span>
+                          </li>
+                      </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0JUN9aDxVmI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Question</th>
+                            <th scope="col">Timestamp</th>
+                            <th scope="col">Popularity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>"Whats an algorithm?"</td>
+                            <td>24:48</td>
+                            <td>High</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>How to do dfs in C++?</td>
+                            <td>5:10</td>
+                            <td>Low</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>What does dx stand for?</td>
+                            <td>44:35</td>
+                            <td>Low</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <div class="row">
+              {% autoescape off %}
+              {{ plot_div }}
+              {% endautoescape %}            
+            </div>
+        </div>
+
+    </div>
+   
+
+</body>
+        
+{% endblock %}

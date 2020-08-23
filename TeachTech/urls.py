@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
+from pages.views import home_view, student_view, teacher_view
+from questions.views import question_detail_view
+from django.conf.urls import include
 
 urlpatterns = [
+    path('',home_view,name='home'),
+    path('student/',student_view,name='student'),
+    path('teacher/',teacher_view,name='teacher'),
+    path('questions/',question_detail_view,name='questions'),
     path('admin/', admin.site.urls),
+    path('django_plotly_dash/', include('django_plotly_dash.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

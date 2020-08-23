@@ -1,0 +1,57 @@
+#body_pad{
+    padding-top: 60px;
+}
+
+#main_title{
+    z-index: 2;
+    font-family: 'Russo One', sans-serif;
+    font-size: 14vh;
+    color: white;
+    margin-bottom: 0;
+}
+#sub_title{
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: thin;
+    font-size: 3vh;
+    color: #fc5185;
+    margin-top: 0;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+.back_img{
+    background-image: url("/static/img/students.jpg");
+      /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.btn-lg {
+    font-size: 5em;
+}
+
+#main_navbar{
+    font-family: 'Russo One', sans-serif;
+}
+
+#sub_navbar{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#question_header{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1em;
+}

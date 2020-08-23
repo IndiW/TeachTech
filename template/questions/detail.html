@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{% if object.question %}{{ object.question }}{% else %}No Questions{% endif %}</p>
+{% endblock %}

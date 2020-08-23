@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="vertical-center back_img">
+    <div class="container text-center align-middle">
+        <h1 id="main_title">TeachTech</h1>     
+        <div class="container">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-md-2">
+                    <a href="{% url 'student'%}">
+                        <button type="button" class="btn btn-dark btn-lg" style="font-family: 'Russo One', sans-serif;">Student</button>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a href="{% url 'teacher' %}">
+                    <button type="button" class="btn btn-dark btn-lg" style="font-family: 'Russo One', sans-serif;">Teacher</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+   
+        
+{% endblock %}
